@@ -1,15 +1,6 @@
 
 <template>
   <ion-page>
-    <!-- <ion-header :translucent="true">
-      <ion-toolbar>
-        <ion-title>Welcome</ion-title>
-
-      </ion-toolbar>
-    </ion-header> -->
-
-
-
     <ion-header>
       <ion-toolbar>
         <ion-buttons>
@@ -29,7 +20,7 @@
       <h1>Home page</h1>
 
       <ion-button expand="full" @click="openModal">Open Modal</ion-button>
-      <ion-button @click="openPopover">Show Action Sheet</ion-button>
+      <ion-button @click="presentActionSheet">Show Action Sheet</ion-button>
     </ion-content>
   </ion-page>
 </template>
