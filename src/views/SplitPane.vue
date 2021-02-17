@@ -27,7 +27,7 @@
 								</ion-item>
 							</ion-list>
 						</ion-col>
-						<ion-col size="9" class="desktop-only">
+						<ion-col size="9" class="split-pane-desktop-only">
 							<ion-item>
 								<ion-label>
 									Detail
@@ -67,7 +67,7 @@ import MasterDetail from "../components/MasterDetail";
 import { caretForwardCircle, close, heart, trash, share, ellipsisVerticalSharp, menu } from "ionicons/icons";
 
 export default {
-  name: "Explorer",
+  name: "split-pane",
   components: {
     IonPage,
     IonHeader,
@@ -137,4 +137,3 @@ export default {
   },
 };
 </script>
-
