@@ -1,5 +1,5 @@
 <template>
-  <ion-page class="mobile-only">
+  <ion-page>
     <ion-header>
       <ion-toolbar>
         <ion-icon :icon="chevronBackOutline" @click="closeForm"></ion-icon>
@@ -18,7 +18,8 @@ import {
   IonHeader,
   IonToolbar,
   IonIcon,
-  IonContent
+  IonContent,
+  modalController
 } from "@ionic/vue";
 
 import { chevronBackOutline } from "ionicons/icons"
@@ -28,9 +29,6 @@ export default {
   props: {
     data: {
       type: String
-    },
-    context: {
-      type: Object
     },
     modalInstance: {
       type: Object
@@ -51,7 +49,7 @@ export default {
   methods: {
     closeForm() {
       // this.$ionic.modalController.dismiss();
-      this.modalInstance.dismiss();
+      modalController.dismiss();
     }
   }
 }

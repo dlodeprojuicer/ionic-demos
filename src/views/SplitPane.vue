@@ -110,30 +110,27 @@ export default {
 			]
 		}
 	},
-  methods: {
-		async showDetail(item) {
-			// document.documentElement.clientWidth => device size
-			// anything > 420 is not mobile
-			console.log(document.documentElement.clientWidth);
-			if (document.documentElement.clientWidth > 420) {
-				// if you have to have data when item is clicked
-				// use item.id to fetch data
-				// onSuccess assign data to this.detail
-				this.detail = item.detail;
-			} else {
-				const modalInstance = modalController;
-				const modal = await modalInstance.create({
-					component: MasterDetail,
-					componentProps: {
-						context: this,
-						data: item.detail,
-						modalInstance,
-					},
-				});
+methods: {
+	async showDetail(item) {
+		// document.documentElement.clientWidth => device size
+		// anything > 420 is not mobile
+		console.log(document.documentElement.clientWidth);
+		if (document.documentElement.clientWidth > 420) {
+			// if you have to fetch data from an API when item is clicked
+			// use item.id to fetch data
+			// onSuccess assign data to this.detail
+			this.detail = item.detail;
+		} else {
+			const modal = await modalController.create({
+				component: MasterDetail,
+				componentProps: {
+					data: item.detail,
+				},
+			});
 
-				return modal.present();
-			}
+			return modal.present();
 		}
-  },
+	}
+},
 };
 </script>
