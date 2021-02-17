@@ -20,7 +20,8 @@
       <h1>Home page</h1>
 
       <ion-button expand="full" @click="openModal">Open Modal</ion-button>
-      <ion-button @click="presentActionSheet">Show Action Sheet</ion-button>
+      <ion-button expand="full" @click="presentActionSheet">Show Action Sheet</ion-button>
+      <ion-button expand="full" :routerLink="{ name: 'split-pane' }">SplitPane</ion-button>
     </ion-content>
   </ion-page>
 </template>
@@ -66,6 +67,9 @@ export default {
     }
   },
   methods: {
+    splitPane() {
+      this.$route.push("/split-pane");
+    },
     async openPopover(ev) {
       const popover = await popoverController
         .create({

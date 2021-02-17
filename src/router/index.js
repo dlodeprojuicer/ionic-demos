@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "@ionic/vue-router";
 //import { RouteRecordRaw } from 'vue-router';
 import Profile from "../views/Profile.vue";
+import SplitPane from "../views/SplitPane.vue";
 import Login from "../views/Login.vue";
 
 import Tabs from "../views/Tabs.vue";
@@ -30,6 +31,13 @@ const routes = [
     name: "profile",
     component: Profile,
   },
+
+  {
+    path: "/split-pane",
+    name: "split-pane",
+    component: SplitPane,
+  },
+
   {
     path: "/user/",
     component: Tabs

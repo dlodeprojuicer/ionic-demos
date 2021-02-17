@@ -19,7 +19,7 @@
         </ion-list>
       </form>
 
-        <ion-button expand="block" :routerLink="{ name: 'profile' }" >Log in</ion-button>
+        <ion-button expand="block" :routerLink="{ name: 'profile' }">Log in</ion-button>
         <ion-button color="light" expand="block">
           Create an account
         </ion-button>
